@@ -1,8 +1,8 @@
 # node-web-gpio-onoff
 
-W3C browsr and robotics CGの Web GPIO API Draft に準拠した、物理コンピューティングのためのNode.js向けGPIOドライバです。CHIRIMEN環境などでの利用を想定し、従来のAPI互換性を保ちながら、バックエンドの駆動方式を抜本的に刷新しました。
+[W3C browsr and robotics CGの Web GPIO API Draft](https://github.com/browserobo/WebGPIO) に準拠した、物理コンピューティングのためのNode.js向けGPIOドライバです。CHIRIMEN環境などでの利用を想定し、従来のAPI互換性を保ちながら、バックエンドの駆動方式を抜本的に刷新しました。
 
-## 旧ドライバ (node-web-gpio) からの主な改善点
+## オリジナルドライバ ([node-web-gpio](https://github.com/chirimen-oh/node-web-gpio)) からの主な改善点
 
 * **ソフトウェアポーリングの排除:** 100msごとのファイル読み取り（`setInterval`）を廃止し、OSレベルのエッジ検出（ハードウェア割り込み）に移行しました。
 * **高速トラッキング:** 卓球の壁打ちカウンターやフォトインタラプタなど、数ミリ秒〜数十ミリ秒の高速パルス（20msでの動作実証済み）を取りこぼさずに検知可能です。
