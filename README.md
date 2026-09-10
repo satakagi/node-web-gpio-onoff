@@ -26,8 +26,11 @@ sudo apt install build-essential python3
 
 # バックエンドエンジンのインストール
 npm install onoff
+```
 
-# package.jsonの設定
+## また、本ライブラリは ES Modules (ESM) を使用しています。もし.js 拡張子のまま import を機能させるには、ご利用のプロジェクトの package.json に以下の設定を追加してください。
+
+```JSON
 {
   "type": "module"
 }
