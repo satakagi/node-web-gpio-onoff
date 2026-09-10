@@ -26,3 +26,25 @@ sudo apt install build-essential python3
 
 # バックエンドエンジンのインストール
 npm install onoff
+
+# package.jsonの設定
+{
+  "type": "module"
+}
+```
+
+## クイックスタート
+
+```javascript
+import { requestGPIOAccess } from "./node-webgpio.js";
+
+const gpioAccess = await requestGPIOAccess();
+const port = gpioAccess.ports.get(17);
+
+// 立ち上がりエッジ検知と10msのチャタリングキャンセルを有効化
+await port.export("in", { edge: "rising", debounce: 10 });
+
+port.onchange = (e) => {
+  console.log(`検知しました: ${e.value}`);
+};
+```
