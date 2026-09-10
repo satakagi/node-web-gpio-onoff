@@ -28,7 +28,7 @@ sudo apt install build-essential python3
 npm install onoff
 ```
 
-## また、本ライブラリは ES Modules (ESM) を使用しています。もし.js 拡張子のまま import を機能させるには、ご利用のプロジェクトの package.json に以下の設定を追加してください。
+また、本ライブラリは ES Modules (ESM) を使用しています。もし.js 拡張子のまま import を機能させるには、ご利用のプロジェクトの `package.json` に以下の設定を追加してください。
 
 ```JSON
 {
